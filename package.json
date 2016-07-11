@@ -1,0 +1,55 @@
+{
+  "name": "react-toggler",
+  "version": "1.0.0",
+  "description": "React component toggler",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch & npm run tdd",
+    "example": "webpack-dev-server",
+    "lint": "eslint src",
+    "test:src": "mocha --compilers js:babel-register --require test/.setup.js test/Toggler.spec.js",
+    "test": "npm run lint && npm run test:src",
+    "tdd": "npm run test:src -- -w",
+    "watch": "npm run compile -- -w",
+    "compile": "babel -d lib src",
+    "prepublish": "npm test && npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sugarshin/react-toggler.git"
+  },
+  "author": "sugarshin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sugarshin/react-toggler/issues"
+  },
+  "homepage": "https://github.com/sugarshin/react-toggler#readme",
+  "peerDependencies": {
+    "react": ">=0.14.0 || ^15.0.0",
+    "react-dom": ">=0.14.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-power-assert": "^1.0.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.11.6",
+    "enzyme": "^2.4.1",
+    "eslint": "^3.2.2",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-react": "^6.0.0",
+    "html-webpack-plugin": "^2.22.0",
+    "jsdom": "^9.4.1",
+    "mocha": "^3.0.1",
+    "power-assert": "^1.4.1",
+    "react": "^15.3.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
