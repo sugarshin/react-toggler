@@ -1,6 +1,6 @@
 {
   "name": "react-toggler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility React component, switch the show/hide of component.",
   "main": "index.js",
   "files": [
